@@ -1,0 +1,21 @@
+{
+  "project": "CCS-CoTFE",
+  "brand": "CoTsel",
+  "title": "Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation",
+  "version": "1.0.0",
+  "releaseDate": "2026-10-25",
+  "website": "https://ccs-cotfe.github.io/CCS-CoTFE/",
+  "paper": "public/docs/arxiv/main_arxiv.pdf",
+  "figures": [
+    "public/paper-figures/scm-overview.png",
+    "public/paper-figures/scm-overview-glass.png",
+    "public/paper-figures/forest-plot.png",
+    "public/paper-figures/bias-surface.png",
+    "public/paper-figures/reversal-map.png",
+    "public/paper-figures/goldilocks.png"
+  ],
+  "checks": [
+    "pnpm build",
+    "pnpm verify:site"
+  ]
+}

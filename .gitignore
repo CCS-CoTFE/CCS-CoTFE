@@ -18,6 +18,8 @@ figure_prompts/
 docs/
 !public/docs/
 !public/docs/**
+!docs/
+!docs/README.md
 arxiv_submission_*.tar.gz
 
 # superseded local source variants
@@ -38,3 +40,6 @@ public/paper-figures/causal-architecture-generated.png
 
 # npm lockfile is kept locally only; pnpm-lock.yaml is canonical
 package-lock.json
+
+# keep Finder metadata out of published asset directories
+public/docs/.DS_Store
