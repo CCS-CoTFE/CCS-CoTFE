@@ -33,7 +33,11 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: >-
+          pnpm install --frozen-lockfile
+          --allow-build=@swc/core
+          --allow-build=@vgpu/adapter-node
+          --allow-build=webgpu
 
       - name: Build exhibit
         run: pnpm build
