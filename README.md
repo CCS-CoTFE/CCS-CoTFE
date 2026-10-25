@@ -1,5 +1,3 @@
-# Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation
-
 <h1 align="center">Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation</h1>
 
 <p align="center">
