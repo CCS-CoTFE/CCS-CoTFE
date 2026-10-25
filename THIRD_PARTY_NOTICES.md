@@ -4,7 +4,7 @@ The Apache-2.0 license applies to the original CCS-CoTFE materials. It does not 
 
 ## Font Awesome 5 Free
 
-The paper PDF uses the GitHub and globe glyphs from Font Awesome 5 Free by Fonticons, Inc. The glyphs were rendered as PNG images and padded for layout. The corresponding assets in the separately distributed LaTeX archive are `figures/github-mark.png` and `figures/globe-mark.png`.
+The paper PDF uses the GitHub and globe glyphs from Font Awesome 5 Free by Fonticons, Inc. Their complete outlines, including portions below the font baseline, were converted to vector PDFs and padded for layout. The corresponding assets in the separately distributed LaTeX archive are `figures/github-mark.pdf` and `figures/globe-mark.pdf`; editable SVG equivalents are included beside them.
 
 - Project: https://fontawesome.com/
 - Upstream license notice: https://github.com/FortAwesome/Font-Awesome/blob/5.x/LICENSE.txt

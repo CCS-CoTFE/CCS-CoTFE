@@ -8,4 +8,4 @@ This public release contains the research exhibit source, paper figures, logo, c
 
 Unless a file or bundled third-party asset carries a more specific notice, the original CCS-CoTFE materials are released under the Apache License, Version 2.0. The Apache License does not grant permission to use the CCS-CoTFE name or marks as trademarks. Third-party dependencies and assets remain under their own licenses.
 
-The GitHub and globe icons in the paper are from Font Awesome 5 Free by Fonticons, Inc. They were rendered from the upstream glyphs and padded for the paper layout. Font Awesome licenses its icons under CC BY 4.0 and its fonts under SIL OFL 1.1. See THIRD_PARTY_NOTICES.md for sources and license links.
+The GitHub and globe icons in the paper are from Font Awesome 5 Free by Fonticons, Inc. Their complete glyph outlines were converted to vector PDFs and padded for the paper layout. Font Awesome licenses its icons under CC BY 4.0 and its fonts under SIL OFL 1.1. See THIRD_PARTY_NOTICES.md for sources and license links.
