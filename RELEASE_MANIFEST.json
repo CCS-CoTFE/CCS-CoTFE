@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "releaseDate": "2026-10-25",
   "website": "https://ccs-cotfe.github.io/CCS-CoTFE/",
+  "repository": "https://github.com/CCS-CoTFE/CCS-CoTFE",
   "paper": "public/docs/arxiv/main_arxiv.pdf",
   "video": "public/promo-film/selected-not-faithful.mp4",
   "figures": [
