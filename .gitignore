@@ -19,6 +19,7 @@ docs/
 !public/docs/
 !public/docs/**
 !docs/
+docs/*
 !docs/README.md
 arxiv_submission_*.tar.gz
 
