@@ -20,7 +20,7 @@ const source = Object.fromEntries(
 const checks = [
   ['App mounts the live liquid glass exhibit', source.app.includes('data-glass-engine="liquid-glass"') && source.app.includes('GlassScene')],
   ['Navigation uses the live glass surface bridge', source.nav.includes('LiquidGlassSurface')],
-  ['Navigation uses the CoTsel identity', source.nav.includes('/paper-cotsel-logo-gradient.png') && source.nav.includes('>CoTsel<') && source.nav.includes('Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation')],
+  ['Navigation uses the CoTsel identity', source.nav.includes('/paper-cotsel-mark.png') && source.nav.includes('>CoTsel<') && source.nav.includes('Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation')],
   ['Hero names the full Chinese university affiliation', source.hero.includes('University of Science and Technology of China')],
   ['Framework uses an interactive active node', source.framework.includes('activeNode')],
   ['Results keeps the chart-state data contract', source.results.includes('ResultTab')],

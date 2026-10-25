@@ -9,7 +9,7 @@ interface NavigationProps {
 }
 
 const items: Array<{ page: Page; label: string; index: string; glyph: string }> = [
-  { page: 'home', label: 'Idea', index: '01', glyph: '⌁' },
+  { page: 'home', label: 'Idea', index: '01', glyph: '💡' },
   { page: 'framework', label: 'Benchmark', index: '02', glyph: '▦' },
   { page: 'results', label: 'Evidence', index: '03', glyph: '◫' },
 ]
@@ -26,7 +26,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
       >
         <div className={styles.brand} aria-label="CoTsel — Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation" title="Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation">
           <span className={styles.brandMark} aria-hidden="true">
-            <img className={styles.brandLogo} src={assetPath('/paper-cotsel-logo-gradient.png')} alt="" />
+            <img className={styles.brandLogo} src={assetPath('/paper-cotsel-mark.png')} alt="" />
           </span>
           <span className={styles.brandText}>CoTsel</span>
         </div>

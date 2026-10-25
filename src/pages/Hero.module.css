@@ -1,12 +1,12 @@
 .hero { display: flex; align-items: flex-start; padding-top: 18px; }
 .layout { display: flex; justify-content: center; width: 100%; }
-.copy { width: min(980px, 100%); max-width: 980px; padding-left: 0; text-align: center; }
+.copy { width: min(1280px, 100%); max-width: 1280px; padding-left: 0; text-align: center; }
 .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 24px; color: var(--muted); font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
 .eyebrowDot { width: 7px; height: 7px; border-radius: 999px; background: var(--signal); box-shadow: 0 0 16px var(--signal); }
-.title { width: 100%; max-width: 1180px; margin: 0 auto; color: var(--text); font-size: clamp(40px, 4.15vw, 66px); font-weight: 800; line-height: .99; letter-spacing: -.02em; text-align: center; }
+.title { width: 100%; max-width: 1280px; margin: 0 auto; color: var(--text); font-size: clamp(40px, 4vw, 64px); font-weight: 800; line-height: .99; letter-spacing: -.02em; text-align: center; }
 .title span { display: block; }
 .titleLead { color: var(--text); white-space: nowrap; }
-.titleTail { color: transparent; white-space: nowrap; letter-spacing: 0; background: linear-gradient(110deg, var(--signal), var(--violet) 54%, var(--coral)); -webkit-background-clip: text; background-clip: text; }
+.titleTail { color: transparent; white-space: normal; letter-spacing: 0; background: linear-gradient(110deg, var(--signal), var(--violet) 54%, var(--coral)); -webkit-background-clip: text; background-clip: text; }
 .subtitle { max-width: 680px; margin: 28px auto 0; color: var(--muted); font-size: clamp(16px, 1.5vw, 20px); line-height: 1.55; white-space: nowrap; }
 .authors { display: flex; align-items: center; justify-content: center; gap: 17px; margin-top: 28px; color: var(--text); }
 .authors div { display: flex; flex-direction: column; gap: 5px; }
