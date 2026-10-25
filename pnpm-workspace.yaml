@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - '@swc/core'
+  - '@vgpu/adapter-node'
+  - webgpu
