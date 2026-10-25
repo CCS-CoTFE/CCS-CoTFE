@@ -1,6 +1,6 @@
-# CCS-CoTFE
+# Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation
 
-<h1 align="center">CCS-CoTFE</h1>
+<h1 align="center">Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation</h1>
 
 <p align="center">
   <strong>The faithful trace. The wrong evidence.</strong><br>
