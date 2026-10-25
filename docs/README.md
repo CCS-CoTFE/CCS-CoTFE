@@ -20,3 +20,5 @@ tests/                 validation scope and release contracts
 ```
 
 The public release does not include private experiment data, internal review notes, local archives, or the superseded nested website repository.
+
+The original CCS-CoTFE materials are released under the Apache License 2.0. Third-party dependencies and bundled assets retain their own licenses; see the root [`LICENSE`](../LICENSE) and [`NOTICE`](../NOTICE) files.

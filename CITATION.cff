@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use the CCS-CoTFE exhibit or paper, please cite this work."
 title: "Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation"
 type: software
+license: Apache-2.0
 version: "1.0.0"
 date-released: "2026-10-25"
 url: "https://ccs-cotfe.github.io/CCS-CoTFE/"

@@ -15,6 +15,7 @@
 
 <p align="center">
   <a href="https://github.com/CCS-CoTFE/CCS-CoTFE/actions/workflows/deploy-pages.yml"><img src="https://github.com/CCS-CoTFE/CCS-CoTFE/actions/workflows/deploy-pages.yml/badge.svg" alt="Deploy website"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache License 2.0"></a>
   <img src="https://img.shields.io/badge/Node.js-20%2B-1d1d1f.svg" alt="Node.js 20 or newer">
   <img src="https://img.shields.io/badge/pnpm-12-0071e3.svg" alt="pnpm 12">
 </p>
@@ -93,7 +94,7 @@ The `main` branch deploys the website automatically with GitHub Pages through [`
 | `scripts/verify-site.mjs` | Deterministic checks for routes, content, assets, and scroll contracts |
 | `.github/workflows/` | GitHub Pages build and deployment |
 
-The public tree intentionally leaves out raw API logs, provider metadata, temporary experiment exports, internal review notes, local archives, and the superseded nested website repository. This release does not claim a separate Hugging Face dataset: the repository publishes the exhibit source, figures, paper PDF, source bundle, and deterministic release checks, while deployment-bound raw responses remain private. The interface uses `@glass-sdk/liquid-glass` for the navigation capsule while keeping research cards calm and legible around the source figures.
+The public tree intentionally leaves out raw API logs, provider metadata, temporary experiment exports, internal review notes, local archives, and the superseded nested website repository. This release does not claim a separate Hugging Face dataset: the repository publishes the exhibit source, figures, paper PDF, and deterministic release checks, while deployment-bound raw responses remain private. The interface uses `@glass-sdk/liquid-glass` for the navigation capsule while keeping research cards calm and legible around the source figures.
 
 ## 📚 Citation
 
@@ -110,4 +111,4 @@ The linked paper is a preprint. The paper PDF, interactive exhibit, GitHub repos
 
 ## ⚖️ License
 
-The authors have not published a separate code or manuscript license in this release. Until a license is added, the repository is available for viewing and citation while reuse remains subject to the authors' permission. See [`NOTICE`](NOTICE) for the release boundary.
+The original CCS-CoTFE source code, exhibit assets, paper figures, and manuscript PDF in this repository are released under the [Apache License 2.0](LICENSE). Third-party dependencies and assets retain their own licenses; see [`NOTICE`](NOTICE) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).

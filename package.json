@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "type": "module",
   "dependencies": {
     "@glass-sdk/liquid-glass": "^0.0.2",

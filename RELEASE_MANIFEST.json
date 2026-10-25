@@ -3,6 +3,7 @@
   "brand": "CoTsel",
   "title": "Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation",
   "version": "1.0.0",
+  "license": "Apache-2.0",
   "releaseDate": "2026-10-25",
   "website": "https://ccs-cotfe.github.io/CCS-CoTFE/",
   "repository": "https://github.com/CCS-CoTFE/CCS-CoTFE",
