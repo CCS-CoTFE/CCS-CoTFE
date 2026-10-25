@@ -25,6 +25,7 @@ docs/*
 !public/promo-film/
 !public/promo-film/**
 arxiv_submission_*.tar.gz
+CCS-CoTFE-paper-source.tar.gz
 
 # superseded local source variants
 *.bak

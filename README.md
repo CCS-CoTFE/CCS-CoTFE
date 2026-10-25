@@ -95,7 +95,7 @@ The `main` branch deploys the website automatically with GitHub Pages through [`
 | `scripts/verify-site.mjs` | Deterministic checks for routes, content, assets, and scroll contracts |
 | `.github/workflows/` | GitHub Pages build and deployment |
 
-The public tree intentionally leaves out private experiment data, review notes, local archives, and the superseded nested website repository. The interface uses `@glass-sdk/liquid-glass` for the navigation capsule while keeping research cards calm and legible around the source figures.
+The public tree intentionally leaves out raw API logs, provider metadata, temporary experiment exports, internal review notes, local archives, and the superseded nested website repository. This release does not claim a separate Hugging Face dataset: the repository publishes the exhibit source, figures, paper PDF, source bundle, and deterministic release checks, while deployment-bound raw responses remain private. The interface uses `@glass-sdk/liquid-glass` for the navigation capsule while keeping research cards calm and legible around the source figures.
 
 ## 📚 Citation
 
