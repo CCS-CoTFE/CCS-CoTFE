@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises'
+import { readFile, stat } from 'node:fs/promises'
 
 const files = {
   app: 'src/App.tsx',
@@ -15,6 +15,19 @@ const files = {
 
 const source = Object.fromEntries(
   await Promise.all(Object.entries(files).map(async ([key, file]) => [key, await readFile(file, 'utf8')])),
+)
+const assets = Object.fromEntries(
+  await Promise.all([
+    ['video', 'public/promo-film/selected-not-faithful.mp4'],
+    ['paper', 'public/docs/arxiv/main_arxiv.pdf'],
+  ].map(async ([key, file]) => {
+    try {
+      const details = await stat(file)
+      return [key, details.isFile() && details.size > 0]
+    } catch {
+      return [key, false]
+    }
+  })),
 )
 
 const checks = [
@@ -42,6 +55,8 @@ const checks = [
   ['Hero centers the paper intro without a side visual', source.hero.includes('className={styles.copy}') && !source.hero.includes('architecture-map.png') && !source.hero.includes('Causal glyph')],
   ['Hero keeps the lead title as a single relaxed line', source.hero.includes('titleLead') && source.hero.includes('Correctness Conditioning') && source.hero.includes('Faithfulness Evaluation')],
   ['Hero exposes a compact research scale rail', source.hero.includes('scaleRail') && source.hero.includes('16<small>/18</small>')],
+  ['Hero embeds the selected-not-faithful project film', source.hero.includes('/promo-film/selected-not-faithful.mp4') && assets.video],
+  ['Published paper PDF is present', assets.paper],
   ['Framework flow has animated particles', source.framework.includes('edgeParticle') && source.framework.includes('nodePulse')],
   ['Framework uses box-based flow nodes', source.framework.includes('nodeBox')],
   ['Framework node chip borders stay still', source.frameworkStyles.includes('.nodeChip .nodePulse { display: none; animation: none; }') && !source.frameworkStyles.includes('.nodeChip:hover, .nodeChip[data-active=\'true\'] { transform')],

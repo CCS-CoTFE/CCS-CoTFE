@@ -50,7 +50,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
         </nav>
 
         <div className={styles.actions}>
-          <a className={styles.externalLink} href={assetPath('/code/index.html')} target="_blank" rel="noreferrer" aria-label="Open Code archive in a new tab">
+          <a className={styles.externalLink} href="https://github.com/CCS-CoTFE/CCS-CoTFE" target="_blank" rel="noreferrer" aria-label="Open the CCS-CoTFE GitHub repository in a new tab">
             <span className={styles.externalIcon} aria-hidden="true">⌘</span>
             <span className={styles.externalLabel}>Code</span>
           </a>

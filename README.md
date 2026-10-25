@@ -12,7 +12,7 @@
   &nbsp;·&nbsp;
   <a href="https://ccs-cotfe.github.io/CCS-CoTFE/">🌐 Website</a>
   &nbsp;·&nbsp;
-  <a href="public/code/index.html">💻 Code</a>
+  <a href="https://github.com/CCS-CoTFE/CCS-CoTFE">💻 Code</a>
 </p>
 
 <p align="center">
@@ -52,6 +52,7 @@ The exhibit turns that claim into a readable path from the structural causal mod
 - **Seven-variable structural model:** difficulty, shortcut competence, reliance, trace, correctness, answer change, and the intervention path remain visible.
 - **Evidence across scales:** 18 screened evaluations, 16 conditioning-dependent reports, a primary +7.4 percentage-point shift, and pooled OR = 1.70.
 - **Interactive reading:** scroll through Idea, Benchmark, and Evidence while selecting paths, chart rows, matrix cells, and source figures.
+- **Project film:** watch *Selected, not faithful* before the causal benchmark chapters.
 
 The central question is simple:
 
@@ -86,6 +87,7 @@ The `main` branch deploys the website automatically with GitHub Pages through [`
 | `src/styles/` | Global type, color, motion, and responsive rules |
 | `public/paper-figures/` | Five source figures from the paper plus a presentation variant |
 | `public/docs/arxiv/` | The paper PDF served by the website |
+| `public/promo-film/` | The public project film embedded in the Idea chapter |
 | `public/code/` | The reproducibility and code archive entry point |
 | `docs/` | Public architecture and release notes |
 | `examples/` | Small reading and interaction examples for the exhibit |
@@ -106,7 +108,7 @@ The public tree intentionally leaves out private experiment data, review notes, 
 }
 ```
 
-The linked paper is a preprint. The paper PDF, interactive exhibit, and code archive are available from the links at the top of this page.
+The linked paper is a preprint. The paper PDF, interactive exhibit, GitHub repository, and code archive are available from the links at the top of this page.
 
 ## ⚖️ License
 

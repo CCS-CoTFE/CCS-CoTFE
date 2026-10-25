@@ -15,12 +15,15 @@ dist/
 3-project-state-and-reviews/
 cot-selection-bias/
 figure_prompts/
+promo-film/
 docs/
 !public/docs/
 !public/docs/**
 !docs/
 docs/*
 !docs/README.md
+!public/promo-film/
+!public/promo-film/**
 arxiv_submission_*.tar.gz
 
 # superseded local source variants

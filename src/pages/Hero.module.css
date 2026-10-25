@@ -1,4 +1,5 @@
-.hero { display: flex; align-items: flex-start; padding-top: 18px; }
+.homeChapter { width: 100%; }
+.hero { display: flex; align-items: flex-start; min-height: calc(100dvh - 132px); height: auto; padding-top: 18px; }
 .layout { display: flex; justify-content: center; width: 100%; }
 .copy { width: min(1280px, 100%); max-width: 1280px; padding-left: 0; text-align: center; }
 .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 24px; color: var(--muted); font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
@@ -23,6 +24,15 @@
 .scaleItem strong { color: var(--text); font-size: 25px; letter-spacing: -.08em; }.scaleItem:first-child strong { color: var(--coral); }
 .scaleItem small { margin-left: 2px; color: var(--signal); font-size: 11px; letter-spacing: 0; }
 .scaleItem span { color: var(--quiet); font: 9px 'DM Mono', monospace; letter-spacing: .06em; text-transform: uppercase; }
+.videoSection { width: min(1120px, 100%); margin: 0 auto; padding: 34px 0 96px; }
+.videoHeading { display: flex; align-items: flex-end; justify-content: space-between; gap: 26px; }
+.videoEyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--quiet); font: 10px 'DM Mono', ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.videoHeading h2 { max-width: 720px; margin: 12px 0 0; color: var(--text); font-size: clamp(30px, 4vw, 54px); line-height: .98; letter-spacing: -.06em; }
+.videoLink { display: inline-flex; align-items: center; gap: 10px; padding: 10px 0; color: var(--signal); text-decoration: none; font-size: 13px; font-weight: 750; white-space: nowrap; transition: transform .25s ease, color .25s ease; }
+.videoLink:hover { color: var(--text); transform: translateY(2px); }
+.videoStage { margin-top: 28px; padding: 12px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--line) 86%, white); border-radius: 30px; background: linear-gradient(145deg, color-mix(in srgb, var(--panel) 78%, transparent), color-mix(in srgb, var(--canvas-deep) 48%, transparent)); box-shadow: 0 30px 82px color-mix(in srgb, var(--canvas-deep) 42%, transparent), inset 0 1px rgba(255,255,255,.7); }
+.videoStage video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 22px; background: #0a1020; object-fit: cover; box-shadow: 0 18px 36px rgb(8 16 34 / .16); }
+.videoCaption { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 7px 2px; color: var(--quiet); font: 10px 'DM Mono', ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
 .visual { --pointer-x: 0; --pointer-y: 0; position: relative; min-height: min(60vh, 590px); display: flex; flex-direction: column; justify-content: center; border: 1px solid var(--line); border-radius: 40px; overflow: hidden; background: linear-gradient(145deg, color-mix(in srgb, var(--panel) 58%, transparent), color-mix(in srgb, var(--canvas-deep) 40%, transparent)); box-shadow: var(--shadow); transform: perspective(1000px) rotateX(calc(var(--pointer-y) * -1deg)) rotateY(calc(var(--pointer-x) * 1.5deg)); transition: transform .35s ease; }
 .visual::after { content: ''; position: absolute; inset: 12%; border: 1px solid color-mix(in srgb, var(--signal) 20%, transparent); border-radius: 999px; transform: translate(calc(var(--pointer-x) * 9px), calc(var(--pointer-y) * 9px)); pointer-events: none; }
 .visualTag, .visualFoot { position: absolute; z-index: 1; display: flex; justify-content: space-between; left: 24px; right: 24px; color: var(--quiet); font-family: 'DM Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
@@ -43,6 +53,7 @@
 .glyphGlow { transform: translate(calc(var(--pointer-x) * 7px), calc(var(--pointer-y) * 7px)); transition: transform .4s ease; }
 .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.8s ease-in-out infinite; }
 @keyframes pulse { 0%, 100% { opacity: .28; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.8); } }
+@media (max-width: 720px) { .videoSection { padding: 18px 0 58px; } .videoHeading { display: block; } .videoHeading h2 { font-size: clamp(30px, 9vw, 46px); } .videoLink { margin-top: 18px; } .videoStage { margin-top: 22px; padding: 8px; border-radius: 22px; } .videoStage video { border-radius: 16px; } .videoCaption { align-items: flex-start; flex-direction: column; gap: 5px; padding: 11px 3px 1px; } }
 @media (max-width: 620px) { .hero { align-items: flex-start; padding-top: 12px; } .title { font-size: clamp(42px, 13vw, 68px); letter-spacing: -.025em; } .titleLead, .titleTail { white-space: normal; } .subtitle { white-space: normal; } .authors { align-items: flex-start; flex-direction: column; gap: 10px; } .authorDivider { display: none !important; } .scaleRail { grid-template-columns: 1fr; gap: 12px; } .scaleItem { padding: 0 0 10px; border-right: 0; border-bottom: 1px solid var(--line); } .scaleItem:last-child { padding-bottom: 0; border-bottom: 0; } }
 
 .prismHalo { transform: translate(calc(var(--pointer-x) * 8px), calc(var(--pointer-y) * 8px)); transition: transform .4s ease; }
