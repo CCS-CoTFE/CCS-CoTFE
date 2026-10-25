@@ -1,0 +1,62 @@
+.hero { display: flex; align-items: flex-start; padding-top: 18px; }
+.layout { display: flex; justify-content: center; width: 100%; }
+.copy { width: min(980px, 100%); max-width: 980px; padding-left: 0; text-align: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 24px; color: var(--muted); font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.eyebrowDot { width: 7px; height: 7px; border-radius: 999px; background: var(--signal); box-shadow: 0 0 16px var(--signal); }
+.title { width: 100%; max-width: 1180px; margin: 0 auto; color: var(--text); font-size: clamp(40px, 4.15vw, 66px); font-weight: 800; line-height: .99; letter-spacing: -.02em; text-align: center; }
+.title span { display: block; }
+.titleLead { color: var(--text); white-space: nowrap; }
+.titleTail { color: transparent; white-space: nowrap; letter-spacing: 0; background: linear-gradient(110deg, var(--signal), var(--violet) 54%, var(--coral)); -webkit-background-clip: text; background-clip: text; }
+.subtitle { max-width: 680px; margin: 28px auto 0; color: var(--muted); font-size: clamp(16px, 1.5vw, 20px); line-height: 1.55; white-space: nowrap; }
+.authors { display: flex; align-items: center; justify-content: center; gap: 17px; margin-top: 28px; color: var(--text); }
+.authors div { display: flex; flex-direction: column; gap: 5px; }
+.authors strong { font-size: 14px; font-weight: 700; }
+.authors span { color: var(--muted); font-size: 11px; }
+.authorDivider { color: var(--quiet) !important; font-size: 22px !important; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-top: 34px; }
+.action { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; min-width: 132px; padding: 13px 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); background: color-mix(in srgb, var(--panel) 75%, transparent); text-decoration: none; font-size: 12px; font-weight: 700; transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+.action:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--signal) 70%, transparent); background: color-mix(in srgb, var(--signal) 13%, var(--panel)); }
+.action.primary { border-color: transparent; color: #06111d; background: linear-gradient(110deg, var(--signal), #a3ecff); box-shadow: 0 10px 28px color-mix(in srgb, var(--signal) 26%, transparent); }
+.scaleRail { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 720px; margin: 46px auto 0; padding-top: 17px; border-top: 1px solid var(--line); }
+.scaleItem { display: grid; gap: 5px; padding: 0 18px; border-right: 1px solid var(--line); text-align: left; }
+.scaleItem:first-child { padding-left: 0; }.scaleItem:last-child { padding-right: 0; border-right: 0; }
+.scaleItem strong { color: var(--text); font-size: 25px; letter-spacing: -.08em; }.scaleItem:first-child strong { color: var(--coral); }
+.scaleItem small { margin-left: 2px; color: var(--signal); font-size: 11px; letter-spacing: 0; }
+.scaleItem span { color: var(--quiet); font: 9px 'DM Mono', monospace; letter-spacing: .06em; text-transform: uppercase; }
+.visual { --pointer-x: 0; --pointer-y: 0; position: relative; min-height: min(60vh, 590px); display: flex; flex-direction: column; justify-content: center; border: 1px solid var(--line); border-radius: 40px; overflow: hidden; background: linear-gradient(145deg, color-mix(in srgb, var(--panel) 58%, transparent), color-mix(in srgb, var(--canvas-deep) 40%, transparent)); box-shadow: var(--shadow); transform: perspective(1000px) rotateX(calc(var(--pointer-y) * -1deg)) rotateY(calc(var(--pointer-x) * 1.5deg)); transition: transform .35s ease; }
+.visual::after { content: ''; position: absolute; inset: 12%; border: 1px solid color-mix(in srgb, var(--signal) 20%, transparent); border-radius: 999px; transform: translate(calc(var(--pointer-x) * 9px), calc(var(--pointer-y) * 9px)); pointer-events: none; }
+.visualTag, .visualFoot { position: absolute; z-index: 1; display: flex; justify-content: space-between; left: 24px; right: 24px; color: var(--quiet); font-family: 'DM Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.visualTag { top: 22px; }
+.visualTag span { color: var(--signal); }
+.visualFoot { bottom: 22px; }
+.architectureStage { position: relative; display: grid; place-items: center; width: 100%; min-height: 390px; padding: 28px 18px 58px; isolation: isolate; }
+.architectureStage::before { content: ''; position: absolute; inset: 17% 8%; z-index: -1; border-radius: 40px; background: radial-gradient(circle at 25% 35%, color-mix(in srgb, var(--signal) 23%, transparent), transparent 54%), radial-gradient(circle at 78% 52%, color-mix(in srgb, var(--coral) 17%, transparent), transparent 48%); filter: blur(24px); opacity: .82; transform: translate(calc(var(--pointer-x) * 10px), calc(var(--pointer-y) * 10px)); transition: transform .4s ease; }
+.architectureStage::after { content: ''; position: absolute; inset: 10% 6% 13%; z-index: -1; border: 1px solid color-mix(in srgb, var(--signal) 16%, transparent); border-radius: 32px; transform: translate(calc(var(--pointer-x) * 8px), calc(var(--pointer-y) * 8px)); transition: transform .4s ease; }
+.architectureImage { display: block; width: min(112%, 880px); height: auto; object-fit: contain; filter: saturate(.88) contrast(1.05) drop-shadow(0 22px 28px color-mix(in srgb, var(--signal) 16%, transparent)); transform: translate(calc(var(--pointer-x) * 8px), calc(var(--pointer-y) * 8px)) scale(1.025); transition: transform .45s cubic-bezier(.16,1,.3,1), filter .45s ease; animation: architecture-float 8s ease-in-out infinite; }
+.visual:hover .architectureImage { filter: saturate(1.08) contrast(1.08) drop-shadow(0 28px 34px color-mix(in srgb, var(--signal) 26%, transparent)); }
+.architectureLabels { position: absolute; inset: 0; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
+.architectureLabels span { position: absolute; padding: 5px 8px; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--canvas) 70%, transparent); box-shadow: 0 8px 20px color-mix(in srgb, var(--canvas-deep) 22%, transparent); backdrop-filter: blur(10px); }
+.archInput { left: 5%; top: 39%; }.archTrace { left: 32%; top: 24%; }.archGate { left: 62%; top: 35%; color: var(--coral); }.archOutput { right: 3%; top: 39%; color: var(--signal); }.archIntervene { left: 54%; bottom: 22%; color: var(--violet); }.archOutcome { right: 17%; bottom: 22%; color: var(--coral); }
+.architectureFormula { position: absolute; bottom: 27px; color: var(--text); font: 700 13px 'DM Mono', monospace; letter-spacing: -.04em; }
+@keyframes architecture-float { 0%,100% { transform: translate(calc(var(--pointer-x) * 8px), calc(var(--pointer-y) * 8px)) scale(1.025); } 50% { transform: translate(calc(var(--pointer-x) * 8px), calc(var(--pointer-y) * 8px - 6px)) scale(1.04); } }
+.glyph { width: 100%; height: auto; padding: 26px; overflow: visible; }
+.glyphGlow { transform: translate(calc(var(--pointer-x) * 7px), calc(var(--pointer-y) * 7px)); transition: transform .4s ease; }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.8s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: .28; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.8); } }
+@media (max-width: 620px) { .hero { align-items: flex-start; padding-top: 12px; } .title { font-size: clamp(42px, 13vw, 68px); letter-spacing: -.025em; } .titleLead, .titleTail { white-space: normal; } .subtitle { white-space: normal; } .authors { align-items: flex-start; flex-direction: column; gap: 10px; } .authorDivider { display: none !important; } .scaleRail { grid-template-columns: 1fr; gap: 12px; } .scaleItem { padding: 0 0 10px; border-right: 0; border-bottom: 1px solid var(--line); } .scaleItem:last-child { padding-bottom: 0; border-bottom: 0; } }
+
+.prismHalo { transform: translate(calc(var(--pointer-x) * 8px), calc(var(--pointer-y) * 8px)); transition: transform .4s ease; }
+.prismOrbit { fill: none; stroke: color-mix(in srgb, var(--signal) 22%, var(--line)); stroke-width: 1.2; stroke-dasharray: 2 12; animation: prism-orbit 14s linear infinite; }
+.prismCore { transform-box: fill-box; transform-origin: center; animation: prism-breathe 4.5s ease-in-out infinite; }
+.prismThread, .prismThreadDim { fill: none; stroke: var(--signal); stroke-width: 2.3; stroke-linecap: round; stroke-dasharray: 2 12; animation: prism-flow 3.6s linear infinite; }
+.prismThreadDim { stroke: var(--coral); stroke-opacity: .2; animation-direction: reverse; }
+.prismNode { transform-box: fill-box; transform-origin: center; animation: prism-node 4.2s ease-in-out infinite; }
+.prismNode:nth-of-type(2) { animation-delay: -1.8s; }
+.prismSignal circle:nth-child(2) { transform-box: fill-box; transform-origin: center; animation: prism-ping 2.2s ease-out infinite; }
+.prismSignal circle:nth-child(3) { transform-box: fill-box; transform-origin: center; animation: prism-ping 2.2s ease-out .65s infinite; }
+.prismBadge { opacity: .86; }
+@keyframes prism-orbit { to { stroke-dashoffset: -160; } }
+@keyframes prism-flow { to { stroke-dashoffset: -70; } }
+@keyframes prism-breathe { 0%,100% { opacity: .55; } 50% { opacity: .9; } }
+@keyframes prism-node { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes prism-ping { 0% { transform: scale(.55); opacity: .75; } 75%,100% { transform: scale(1.7); opacity: 0; } }

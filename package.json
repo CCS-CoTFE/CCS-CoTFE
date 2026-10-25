@@ -1,0 +1,29 @@
+{
+  "name": "ccs-cotfe",
+  "version": "1.0.0",
+  "description": "Research exhibit for Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "verify:site": "node scripts/verify-site.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@glass-sdk/liquid-glass": "^0.0.2",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@vitejs/plugin-react-swc": "^4.3.3",
+    "framer-motion": "^14.6.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.186.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "private": true
+}

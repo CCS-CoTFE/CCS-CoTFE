@@ -1,0 +1,86 @@
+.app {
+  position: relative;
+  min-height: 100dvh;
+  overflow: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 64% 46% at 8% 8%, color-mix(in srgb, var(--signal) 20%, transparent), transparent 72%),
+    radial-gradient(ellipse 54% 42% at 92% 6%, color-mix(in srgb, var(--violet) 18%, transparent), transparent 74%),
+    radial-gradient(ellipse 52% 48% at 82% 62%, color-mix(in srgb, var(--coral) 12%, transparent), transparent 76%),
+    radial-gradient(ellipse 44% 38% at 16% 76%, color-mix(in srgb, #49d9c0 11%, transparent), transparent 74%),
+    radial-gradient(ellipse 72% 54% at 50% 38%, color-mix(in srgb, white 38%, transparent), transparent 78%),
+    var(--canvas);
+  transition: background 600ms ease, color 350ms ease;
+}
+.glass-ui { position: relative; z-index: 1; min-height: 100dvh; }
+
+.scene-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: transparent;
+}
+
+.ambient { position: absolute; border-radius: 999px; filter: blur(1px); opacity: 0.74; transform: translate3d(0, 0, 0); }
+.ambient-one { width: 38vw; height: 38vw; left: -12vw; top: 34vh; background: radial-gradient(circle, color-mix(in srgb, var(--signal) 28%, transparent), transparent 70%); animation: drift-one 16s ease-in-out infinite alternate; }
+.ambient-two { width: 34vw; height: 34vw; right: -8vw; top: 22vh; background: radial-gradient(circle, color-mix(in srgb, var(--violet) 26%, transparent), transparent 68%); animation: drift-two 18s ease-in-out infinite alternate; }
+.ambient-three { width: 22vw; height: 22vw; right: 24vw; bottom: -12vw; background: radial-gradient(circle, color-mix(in srgb, var(--coral) 18%, transparent), transparent 68%); animation: drift-three 20s ease-in-out infinite alternate; }
+
+.stage { position: relative; z-index: 1; height: 100dvh; padding: 104px 32px 28px; overflow-y: auto; overscroll-behavior-y: contain; scroll-behavior: auto; scroll-snap-type: none; scrollbar-width: none; }
+.stage::-webkit-scrollbar { display: none; }
+.story-layout { display: block; width: min(1480px, 100%); min-height: 100%; margin: 0 auto; }
+.story-rail { position: sticky; top: 104px; z-index: 4; height: calc(100dvh - 132px); display: flex; align-items: center; min-width: 0; }
+.story-rail-surface { display: block; width: 100%; padding: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); --lg-foreground: var(--text); }
+.story-rail-kicker, .story-rail-caption { color: var(--quiet); font: 10px 'DM Mono', ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.story-rail-kicker { display: flex; align-items: center; gap: 8px; }
+.story-rail-beacon { width: 7px; height: 7px; border-radius: 999px; background: var(--signal); box-shadow: 0 0 0 0 color-mix(in srgb, var(--signal) 45%, transparent); animation: beacon-pulse 2s ease-out infinite; }
+@keyframes beacon-pulse { 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.story-rail-index { margin-top: 58px; color: var(--signal); font: 11px 'DM Mono', ui-monospace, monospace; }
+.story-rail h1 { margin: 10px 0 12px; color: var(--text); font-size: clamp(28px, 3.2vw, 46px); line-height: .98; letter-spacing: -.07em; }
+.story-rail p { max-width: 220px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.story-rail-line { height: 3px; margin: 46px 0 14px; overflow: hidden; border-radius: 999px; background: var(--line); }
+.story-rail-line span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--signal), var(--violet)); transition: width .45s cubic-bezier(.16,1,.3,1); }
+.scroll-stack { min-height: 100%; min-width: 0; width: 100%; }
+.scroll-panel { display: flex; align-items: center; min-height: 100dvh; padding: 104px 0 44px; box-sizing: border-box; scroll-margin-top: 104px; opacity: 1; transform: none; filter: saturate(1); }
+.scroll-panel[data-page='home'] { padding-top: 28px; }
+.page-view { width: 100%; height: 100%; margin: 0 auto; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-panel[data-visible='true'] .page-view { animation: section-settle .72s cubic-bezier(.16,1,.3,1) both; }
+}
+@keyframes section-settle {
+  from { opacity: .78; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html[data-reveal-ready='true'] [data-reveal] { opacity: 0; transform: translate3d(0, 26px, 0) scale(.985); filter: blur(7px); transition: opacity .78s cubic-bezier(.16,1,.3,1), transform .78s cubic-bezier(.2,1.18,.3,1), filter .78s ease; transition-delay: var(--reveal-delay, 0ms); will-change: opacity, transform, filter; }
+html[data-reveal-ready='true'] [data-reveal][data-revealed='true'] { opacity: 1; transform: translate3d(0, 0, 0) scale(1); filter: blur(0); }
+
+@keyframes drift-one { to { transform: translate3d(6vw, -4vh, 0) scale(1.08); } }
+@keyframes drift-two { to { transform: translate3d(-5vw, 4vh, 0) scale(0.92); } }
+@keyframes drift-three { to { transform: translate3d(-3vw, -6vh, 0) scale(1.2); } }
+
+@media (max-width: 980px) {
+  .story-rail { top: 98px; height: auto; min-height: 0; margin-bottom: 20px; }
+  .story-rail-surface { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px 14px; padding: 14px 18px; }
+  .story-rail-kicker { grid-column: 1 / -1; }
+  .story-rail-index { margin-top: 0; }
+  .story-rail h1 { margin: 0; font-size: 24px; }
+  .story-rail p, .story-rail-caption { display: none; }
+  .story-rail-line { grid-column: 1 / -1; margin: 4px 0 0; }
+}
+@media (max-width: 720px) {
+  body { overflow: hidden; }
+  .stage { height: 100dvh; min-height: 0; padding: 98px 18px 24px; }
+  .scroll-panel { min-height: 100dvh; padding-top: 98px; scroll-margin-top: 98px; }
+  .scroll-panel[data-page='home'] { padding-top: 24px; }
+  .page-view { height: 100%; min-height: 0; }
+  .ambient-one { width: 70vw; height: 70vw; }
+  .ambient-two { width: 62vw; height: 62vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-reveal-ready='true'] [data-reveal], html[data-reveal-ready='true'] [data-reveal][data-revealed='true'] { opacity: 1; transform: none; filter: none; transition: none; }
+  .scroll-panel[data-visible='true'] .page-view { animation: none; }
+}
