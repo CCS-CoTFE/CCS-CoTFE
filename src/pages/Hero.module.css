@@ -8,7 +8,7 @@
 .title span { display: block; }
 .titleLead { color: var(--text); white-space: nowrap; }
 .titleTail { color: transparent; white-space: normal; letter-spacing: 0; background: linear-gradient(110deg, var(--signal), var(--violet) 54%, var(--coral)); -webkit-background-clip: text; background-clip: text; }
-.subtitle { max-width: 680px; margin: 28px auto 0; color: var(--muted); font-size: clamp(16px, 1.5vw, 20px); line-height: 1.55; white-space: nowrap; }
+.subtitle { max-width: 820px; margin: 28px auto 0; color: var(--muted); font-size: clamp(16px, 1.5vw, 20px); line-height: 1.55; white-space: normal; }
 .authors { display: flex; align-items: center; justify-content: center; gap: 17px; margin-top: 28px; color: var(--text); }
 .authors div { display: flex; flex-direction: column; gap: 5px; }
 .authors strong { font-size: 14px; font-weight: 700; }
@@ -23,7 +23,7 @@
 .scaleItem:first-child { padding-left: 0; }.scaleItem:last-child { padding-right: 0; border-right: 0; }
 .scaleItem strong { color: var(--text); font-size: 25px; letter-spacing: -.08em; }.scaleItem:first-child strong { color: var(--coral); }
 .scaleItem small { margin-left: 2px; color: var(--signal); font-size: 11px; letter-spacing: 0; }
-.scaleItem span { color: var(--quiet); font: 9px 'DM Mono', monospace; letter-spacing: .06em; text-transform: uppercase; }
+.scaleItem span { color: var(--quiet); font: 9px 'DM Mono', monospace; letter-spacing: .06em; line-height: 1.35; text-transform: uppercase; }
 .videoSection { width: min(1120px, 100%); margin: 0 auto; padding: 34px 0 96px; }
 .videoHeading { display: flex; align-items: flex-end; justify-content: space-between; gap: 26px; }
 .videoEyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--quiet); font: 10px 'DM Mono', ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }

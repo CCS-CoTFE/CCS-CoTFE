@@ -19,7 +19,7 @@ export default function Hero() {
               <span className={styles.titleTail}>as Selection in Chain-of-Thought</span>
               <span className={styles.titleTail}>Faithfulness Evaluation</span>
             </h1>
-            <p className={styles.subtitle} data-reveal="subtitle">A causal benchmark for knowing when a faithful trace is actually faithful.</p>
+            <p className={styles.subtitle} data-reveal="subtitle">Correctness conditioning changes the estimand in intervention-based CoT faithfulness evaluation.</p>
 
             <div className={styles.authors} aria-label="Authors" data-reveal="authors">
               <div data-reveal="author">
@@ -51,15 +51,15 @@ export default function Hero() {
             <div className={styles.scaleRail} aria-label="Research scale" data-reveal="scale">
               <div className={styles.scaleItem} data-reveal="metric">
                 <strong>+7.4<small>pp</small></strong>
-                <span>average conditional shift</span>
+                <span>GLM-5.3 primary · n = 1000</span>
               </div>
               <div className={styles.scaleItem} data-reveal="metric">
-                <strong>16<small>/18</small></strong>
-                <span>studies affected</span>
+                <strong>4</strong>
+                <span>sub-ceiling deployments · positive gaps</span>
               </div>
               <div className={styles.scaleItem} data-reveal="metric">
-                <strong>5</strong>
-                <span>benchmark views</span>
+                <strong>1.70<small>OR</small></strong>
+                <span>pooled odds ratio</span>
               </div>
             </div>
           </motion.div>

@@ -49,7 +49,7 @@ The exhibit turns that claim into a readable path from the structural causal mod
 
 - **Selection as a causal operator:** correctness opens a path that can shift the faithfulness estimate.
 - **Seven-variable structural model:** difficulty, shortcut competence, reliance, trace, correctness, answer change, and the intervention path remain visible.
-- **Evidence across scales:** 18 screened evaluations, 16 conditioning-dependent reports, a primary +7.4 percentage-point shift, and pooled OR = 1.70.
+- **Evidence across scales:** an 18-paper protocol inventory, a primary +7.4 percentage-point shift, four positive sub-ceiling deployment gaps, and pooled OR = 1.70.
 - **Interactive reading:** scroll through Idea, Benchmark, and Evidence while selecting paths, chart rows, matrix cells, and source figures.
 - **Project film:** watch *Selected, not faithful* before the causal benchmark chapters.
 
@@ -84,7 +84,7 @@ The `main` branch deploys the website automatically with GitHub Pages through [`
 | `src/components/` | Navigation and the live Liquid Glass surface bridge |
 | `src/pages/` | The three continuous-scroll chapters: Idea, Benchmark, and Evidence |
 | `src/styles/` | Global type, color, motion, and responsive rules |
-| `public/paper-figures/` | Five source figures from the paper plus a presentation variant |
+| `public/paper-figures/final/` | All fourteen numbered figures from the final paper |
 | `public/docs/arxiv/` | The paper PDF served by the website |
 | `public/promo-film/` | The public project film embedded in the Idea chapter |
 | `public/code/` | The reproducibility and code archive entry point |
@@ -94,7 +94,7 @@ The `main` branch deploys the website automatically with GitHub Pages through [`
 | `scripts/verify-site.mjs` | Deterministic checks for routes, content, assets, and scroll contracts |
 | `.github/workflows/` | GitHub Pages build and deployment |
 
-The public tree intentionally leaves out raw API logs, provider metadata, temporary experiment exports, internal review notes, local archives, and the superseded nested website repository. This release does not claim a separate Hugging Face dataset: the repository publishes the exhibit source, figures, paper PDF, and deterministic release checks, while deployment-bound raw responses remain private. The interface uses `@glass-sdk/liquid-glass` for the navigation capsule while keeping research cards calm and legible around the source figures.
+The public tree intentionally leaves out raw API logs, provider metadata, temporary experiment exports, internal review notes, local archives, and the superseded nested website repository. This release does not claim a separate Hugging Face dataset: the repository publishes the exhibit source, all fourteen paper figures, the final paper PDF, the standalone PDFLaTeX source archive, and deterministic release checks, while deployment-bound raw responses remain private. The interface uses `@glass-sdk/liquid-glass` for the navigation capsule while keeping research cards calm and legible around the source figures.
 
 ## 📚 Citation
 

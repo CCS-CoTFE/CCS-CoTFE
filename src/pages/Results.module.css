@@ -38,6 +38,12 @@
 .coverageSummary strong { color: var(--coral); font-size: clamp(64px, 7vw, 104px); letter-spacing: -.1em; line-height: .8; }
 .coverageSummary span { max-width: none; color: var(--muted); font-size: 12px; line-height: 1.5; white-space: nowrap; }
 .dotMatrix { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.protocolGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-height: 440px; overflow: auto; padding-right: 2px; }
+.protocolItem { display: grid; gap: 4px; min-width: 0; padding: 10px 11px; border: 1px solid var(--line); border-radius: 12px; color: var(--muted); background: color-mix(in srgb, var(--panel) 34%, transparent); text-decoration: none; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+.protocolItem:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--signal) 58%, transparent); color: var(--text); background: color-mix(in srgb, var(--signal) 8%, transparent); }
+.protocolItem strong { overflow: hidden; color: var(--text); font-size: 11px; line-height: 1.25; text-overflow: ellipsis; white-space: nowrap; }
+.protocolItem small { color: var(--signal); font: 9px 'DM Mono', monospace; }
+.protocolItem span { color: var(--quiet); font-size: 10px; line-height: 1.35; }
 .dotAffected, .dotUnaffected { display: inline-block; width: 17px; height: 17px; border-radius: 999px; }
 .dotAffected { background: var(--signal); box-shadow: 0 0 14px color-mix(in srgb, var(--signal) 45%, transparent); }
 .dotUnaffected { background: var(--line); border: 1px solid var(--quiet); }
@@ -74,7 +80,7 @@
 .trendLabel, .axisLabel { fill: var(--quiet); font: 10px 'DM Mono', monospace; }.axisLabel { font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
 .trendCallout { display: flex; align-items: center; gap: 7px; margin-top: 2px; color: var(--muted); font-size: 11px; }.trendCallout strong { color: var(--violet); }
 .matrixPanel { padding-top: 18px; }
-.matrixLabels, .matrixRow { display: grid; grid-template-columns: 120px repeat(4, 1fr); gap: 8px; align-items: center; }
+.matrixLabels, .matrixRow { display: grid; grid-template-columns: 160px repeat(2, 1fr); gap: 8px; align-items: center; }
 .matrixLabels { margin-bottom: 8px; color: var(--quiet); font: 9px 'DM Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
 .matrixLabels span:not(:first-child) { text-align: center; }
 .matrixRow { margin-top: 8px; }
@@ -109,11 +115,13 @@
 .figureDetail { display: grid; gap: 6px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 16px; background: color-mix(in srgb, var(--canvas) 62%, transparent); }
 .figureDetail > span { color: var(--signal); font: 9px 'DM Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
 .figureDetail h3 { margin: 0; color: var(--text); font-size: 18px; letter-spacing: -.04em; }
-.figureDetail p { max-width: none; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.55; white-space: nowrap; }
+.figureDetail p { max-width: none; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.figureSource { width: fit-content; color: var(--signal); font: 10px 'DM Mono', monospace; text-decoration: none; }
+.figureSource:hover { text-decoration: underline; }
 .footerNote { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; color: var(--quiet); font-size: 10px; }
 .footerNote strong { color: var(--muted); font-weight: 500; }
 .footerNote a { color: var(--signal); text-decoration: none; }
-@media (max-width: 760px) { .results-page { justify-content: flex-start; gap: 26px; padding-top: 8px; } .header { align-items: start; flex-direction: column; gap: 10px; } .header > p { max-width: 500px; white-space: normal; } .metricRail { gap: 6px; } .metric { padding: 11px 10px; } .metric strong { font-size: 20px; } .chartCard { padding: 17px; } .coveragePanel, .decompPanel { grid-template-columns: 1fr; gap: 22px; } .coverageSummary span, .decompCopy p, .figureDetail p { white-space: normal; } .coverageLegend { grid-column: auto; } .ring { width: 150px; height: 150px; } .footerNote { grid-template-columns: 1fr auto; } .footerNote strong { display: none; } .matrixLabels, .matrixRow { grid-template-columns: 82px repeat(4, 1fr); gap: 5px; } .matrixCell, .matrixCellActive { min-height: 42px; font-size: 10px; } .figurePanel { grid-template-columns: 1fr; gap: 14px; } .figureRail { grid-template-columns: repeat(2, 1fr); } .figureButton:hover, .figureActive { transform: translateY(-2px); } .figureImageWrap { min-height: 210px; padding: 9px; } .figureGrid { grid-template-columns: 1fr; } .figureCardImage { height: clamp(320px, 92vw, 560px); padding: 14px; } }
+@media (max-width: 760px) { .results-page { justify-content: flex-start; gap: 26px; padding-top: 8px; } .header { align-items: start; flex-direction: column; gap: 10px; } .header > p { max-width: 500px; white-space: normal; } .metricRail { gap: 6px; } .metric { padding: 11px 10px; } .metric strong { font-size: 20px; } .chartCard { padding: 17px; } .coveragePanel, .decompPanel { grid-template-columns: 1fr; gap: 22px; } .coverageSummary span, .decompCopy p, .figureDetail p { white-space: normal; } .protocolGrid { grid-template-columns: 1fr; max-height: none; } .coverageLegend { grid-column: auto; } .ring { width: 150px; height: 150px; } .footerNote { grid-template-columns: 1fr auto; } .footerNote strong { display: none; } .matrixLabels, .matrixRow { grid-template-columns: 110px repeat(2, 1fr); gap: 5px; } .matrixCell, .matrixCellActive { min-height: 42px; font-size: 10px; } .figurePanel { grid-template-columns: 1fr; gap: 14px; } .figureRail { grid-template-columns: repeat(2, 1fr); } .figureButton:hover, .figureActive { transform: translateY(-2px); } .figureImageWrap { min-height: 210px; padding: 9px; } .figureGrid { grid-template-columns: 1fr; } .figureCardImage { height: clamp(320px, 92vw, 560px); padding: 14px; } }
 @media (max-width: 520px) { .metric span, .metric i { font-size: 9px; } .metric strong { font-size: 18px; } .tabs { width: 100%; } .tabs button { flex: 1; justify-content: center; padding-inline: 7px; } .tabs button span { display: none; } .benchmarkRow, .benchmarkActive { grid-template-columns: 76px 1fr 44px; gap: 9px; } .axis { margin-left: 85px; } .dotMatrix { gap: 10px; } }
 
 @media (prefers-reduced-motion: reduce) { .trendLineObserved, .trendLineAdjusted { stroke-dasharray: none; stroke-dashoffset: 0; transition: none; } .trendArea, .trendPointObserved, .trendPointAdjusted { opacity: 1; transition: none; } }
